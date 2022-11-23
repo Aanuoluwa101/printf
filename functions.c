@@ -1,4 +1,4 @@
-#inlcude "main.h"
+#include "main.h"
 
 /**
 * write_character - prints a character
@@ -19,6 +19,7 @@ int write_character(char c)
  * Return: the number of character printed
  * excluding null bytes
  */
+
 int write_string(char *s)
 {
 	int i;
@@ -41,6 +42,7 @@ int write_string(char *s)
  * Return: the number of characters in a string
  * excluding null bytes
  */
+
 int _strlen(char *s)
 {
 	int len;
@@ -64,10 +66,11 @@ int print_reverse(char *s)
 	int len;
 
 	len = _strlen(s);
-	for (i = len - 1 >= 0; i--)
+	for (i = len - 1; i >= 0; i--)
 		write_character(s[i]);
 	return (len);
 }
+
 
 /**
  * print_binary - a function that prints an
@@ -76,6 +79,7 @@ int print_reverse(char *s)
  *
  * Return: the number of character printed
  */
+
 int print_binary(int num)
 {
 	int size;
@@ -90,7 +94,7 @@ int print_binary(int num)
 		return (1);
 	}
 
-	for (size = 0; i = num; i > 0; i /= 2)
+	for (size = 0, i = num; i > 0; i /= 2)
 		size++;
 
 	ptr = malloc(size * sizeof(int));
@@ -104,3 +108,5 @@ int print_binary(int num)
 
 	return (size);
 }
+
+
